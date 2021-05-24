@@ -44,7 +44,7 @@ jobs:
           DIFF_BUGS: /tmp/diffbugs.json
       - name: Create or update Pull Request
         if: steps.getlpbugs.outputs.modified == 'true'
-        uses: peter-evans/create-pull-request@v2
+        uses: peter-evans/create-pull-request@v3.10.0
         with:
           commit-message: Update LP bug list
           title: Auto update list of Yaru bugs on Launchpad
